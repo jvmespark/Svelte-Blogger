@@ -3,7 +3,8 @@
     "name": "name",
     "email": "email",
     "linkedin": "https://www.linkedin.com/404/",
-    "github": "https://github.com/404"
+    "github": "https://github.com/404", 
+    "about": "html block"
   },
   "publish": {
     "branch": "none",

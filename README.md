@@ -9,16 +9,10 @@ A bare minimum and non-bloated blogger website template
 - expanded md-html rendering components
 - post comment section
 - scalable design
-- documentation
-
-## Technologies  
-### Frontend
-- Svelte, Typescript
-### Backend
-- Node, Mdsvex, Disqus
+- documentation on how to navigate and use this template
 
 ## Getting Started
 - git clone
-- customize variables
+- customize blogger-config.json
 - host your disqus server
 - launch on github pages
