@@ -1,13 +1,29 @@
 {
   "user": {
-    "name": "name",
-    "email": "email",
-    "linkedin": "https://www.linkedin.com/404/",
-    "github": "https://github.com/404", 
-    "about": "html block"
+    "name": "James Park",
+    "email": "jamesdpark1@gmail.com",
+    "links": [
+      {
+        "name": "linkedin",
+        "source":"https://www.linkedin.com/404/"
+      },
+      {
+        "name": "github",
+        "source":"https://github.com/404"
+      },
+      {
+        "name": "youtube",
+        "source":"https://youtube.com/"
+      },
+      {
+        "name": "email",
+        "source":"mailto:"
+      }
+    ],
+    "about": "Undegraduate computer science major at <a href=\"https://en.wikipedia.org/wiki/Rensselaer_Polytechnic_Institute\">RPI</a>."
   },
   "publish": {
-    "branch": "none",
-    "repo": "none",
+    "branch": "gh-pages",
+    "repo": "https://github.com/jvmespark/jvmespark.github.io.git"
   }
 }

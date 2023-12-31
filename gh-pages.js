@@ -1,13 +1,14 @@
 import { publish } from 'gh-pages';
+import * as custom from 'blogger-config.json';
 
 publish(
- 'build', // path to public directory
+ 'build',
  {
-  branch: 'gh-pages',
-  repo: 'https://github.com/jvmespark/ivmespark.github.io.git', // Update to point to your repository
+  branch: custom.branch,
+  repo: custom.repo,
   user: {
-   name: 'James Park', // update to use your name
-   email: 'jamesdpark1@gmail.com' // Update to use your email
+   name: custom.name,
+   email: custom.email
   },
   dotfiles: true
   },

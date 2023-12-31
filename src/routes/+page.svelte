@@ -1,3 +1,9 @@
+<script>
+    import * as custom from '../../blogger-config.json'
+    var aboutHTML=JSON.parse(JSON.stringify(custom.user.about));
+    var links=custom.user.links
+</script>
+
 <div class="profile_container">
     <div class="profile">
         <div class="profile_inner">
@@ -6,9 +12,13 @@
             </div>
             <div class="profile_text">
                 <span>
-                    <h3>James Park</h3>Undegraduate computer science major at <a href="https://en.wikipedia.org/wiki/Rensselaer_Polytechnic_Institute">RPI</a>.<br>
+                    <h3>{custom.user.name}</h3>{@html aboutHTML}
+                    <br>
                 </span><br>
-                <a href="">Github</a>&nbsp;&nbsp;<a href="">LinkedIn</a>&nbsp;&nbsp;<a href="">Youtube</a>
+                {#each links as l}
+                    <a href={l.source}>{l.name}</a>&nbsp;&nbsp
+                {/each}
+                <!--<a href={custom.user.github}>Github</a>&nbsp;&nbsp;<a href={custom.user.linkedin}>LinkedIn</a>&nbsp;&nbsp;<a href={custom.user.youtube}>Youtube</a>-->
             </div>
         </div>
     </div>

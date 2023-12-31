@@ -7,8 +7,8 @@ tag: "essays"
 ---
 
 <script>
-  import SEO from '$lib/components/seo.svelte'
-  import Image from '$lib/components/Image.svelte'
+  import SEO from '../src/lib/components/seo.svelte'
+  import Image from '../src/lib/components/Image.svelte'
 </script>
 <SEO title={title} description={description}/>
 
