@@ -1,5 +1,5 @@
 <script>
-    import * as custom from '../../blogger-config.json'
+    import * as custom from '../../user/blogger-config.json'
     var aboutHTML=JSON.parse(JSON.stringify(custom.user.about));
     var links=custom.user.links
 </script>
