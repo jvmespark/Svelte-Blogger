@@ -16,6 +16,7 @@
 	export let data: PageData;
 </script>
 
+<div class="container">
 <PageHead title="Blogs" description="An awesome blog about development with Svelte" />
 
 <ButtonContainer>
@@ -76,10 +77,13 @@
 </Gallery>
 
 <slot />
-
+</div>
 
 <style>
-    
+
+.container {
+}
+
 a {
     color: black;
     text-decoration: none;
