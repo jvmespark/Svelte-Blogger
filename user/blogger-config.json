@@ -20,7 +20,7 @@
         "source":"mailto:"
       }
     ],
-    "about": "Undegraduate computer science major at <a href=\"https://en.wikipedia.org/wiki/Rensselaer_Polytechnic_Institute\">RPI</a>."
+    "about": "Undegraduate computer science major at <a href=\"https://en.wikipedia.org/wiki/Rensselaer_Polytechnic_Institute\">RPI</a> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt"
   },
   "publish": {
     "branch": "gh-pages",

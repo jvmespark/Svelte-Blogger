@@ -5,9 +5,7 @@
 </script>
 
 <div class="app">
-	<Header>
-		<a href="/"><h1 class:small={$page.url.pathname !== '/'}>d0ngeun</h1></a>
-	</Header>	
+	<Header></Header>
 	<main>
 		<slot />
 	</main>
