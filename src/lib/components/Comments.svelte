@@ -21,6 +21,16 @@
 <div class="comment-container">
   <CommentForm on:sendCommentDetails={createNewComment} slug={slug} name={""} content={""}></CommentForm>
   <!--get comments from this slug-->
+  {#each comments as c}
+    <div class="comment">
+      <p>{c.name}</p>
+      <p>{c.content}</p>
+    </div>
+  {:else}
+    <div>
+      <p>no comments yet</p>
+    </div>
+  {/each}
 
 </div>
 

@@ -2,7 +2,7 @@ import type { PageLoad } from './$types';
 import { slugFromPath } from '$lib/slugFromPath';
 import { error } from '@sveltejs/kit';
 
-import { getDocs, query, where } from 'Firebase/firestore/lite';
+import { query, where, getDocs, DocumentData, QuerySnapshot } from 'Firebase/firestore/lite';
 import { commentCollection } from '$lib/Firebase.js';
 
 export const load: PageLoad = async ({ params }) => {
@@ -22,10 +22,18 @@ export const load: PageLoad = async ({ params }) => {
 		throw error(404); // Couldn't resolve the post
 	}
 
-	// TODO write the getcomments function and return
+	// TODO write the getcomments function and return as comments
+	const q: query = query(commentCollection, where("slug", "==", params.slug));
+	const querySnapshot: QuerySnapshot<DocumentData> = await getDocs(q);
+	let comments: Array<DocumentData & { id: string }> = [];
+	// Use es6 spread operator to add the blogs and their id
+	querySnapshot.forEach((comment) => {
+		comments.push({ ...comment.data(), id: comment.id });
+	});
 
 	return {
 		component: post.default,
-		frontmatter: post.metadata
+		frontmatter: post.metadata,
+		comments: comments
 	};
 };
