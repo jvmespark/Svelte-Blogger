@@ -2,6 +2,9 @@ import type { PageLoad } from './$types';
 import { slugFromPath } from '$lib/slugFromPath';
 import { error } from '@sveltejs/kit';
 
+import { getDocs, query, where } from 'Firebase/firestore/lite';
+import { commentCollection } from '$lib/Firebase.js';
+
 export const load: PageLoad = async ({ params }) => {
 	const modules = import.meta.glob(`/user/posts/*.{md,svx,svelte.md}`);
 
@@ -18,6 +21,8 @@ export const load: PageLoad = async ({ params }) => {
 	if (!post || !post.metadata.published) {
 		throw error(404); // Couldn't resolve the post
 	}
+
+	// TODO write the getcomments function and return
 
 	return {
 		component: post.default,

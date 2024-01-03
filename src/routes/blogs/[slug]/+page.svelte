@@ -9,6 +9,7 @@
 	import Comments from '$lib/components/Comments.svelte';
 
 	export let data: PageData;
+	console.log(data)
 
 	let slug = $page.url.pathname.split('/').pop();
 
@@ -22,7 +23,7 @@
 	<ArticleTitle title={data.frontmatter.title} />
 	<ArticleMeta author={data.frontmatter.author} date={data.frontmatter.date} />
 	<svelte:component this={component} />
-	<Comments slug={slug}></Comments>
+	<Comments slug={slug} comments={data.comments}></Comments>
 </main>
 
 <style>
