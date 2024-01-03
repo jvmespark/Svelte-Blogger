@@ -1,8 +1,10 @@
 <script lang="ts">
-	export let title: string;
-	export let description: string;
+	import * as custom from "../../../user/blogger-config.json";
+	
+	export let title=custom.blog.title;
+	export let description=custom.blog.description;
 
-	const siteTitle = 'd0ngeun';
+	const siteTitle = custom.blog.title;
 	const formattedTitle = title ? `${title} | ${siteTitle}` : siteTitle;
 </script>
 

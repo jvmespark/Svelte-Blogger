@@ -14,5 +14,5 @@ A bare minimum and non-bloated blogger website template
 ## Getting Started
 - git clone
 - customize blogger-config.json
-- host your disqus server
+- host your firebase server
 - launch on github pages

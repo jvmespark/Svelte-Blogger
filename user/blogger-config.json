@@ -25,5 +25,9 @@
   "publish": {
     "branch": "gh-pages",
     "repo": "https://github.com/jvmespark/jvmespark.github.io.git"
+  },
+  "blog": {
+    "title": "title",
+    "description": "desc"
   }
 }
