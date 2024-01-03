@@ -1,6 +1,8 @@
 <script>
-	export let title;
-	export let description;
+	import * as custom from "../../../user/blogger-config.json"
+
+	export let title=custom.blog.title;
+	export let description=custom.blog.description;
 </script>
 
 <svelte:head>
